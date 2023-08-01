@@ -1,5 +1,5 @@
 import torch
-from denoising_diffusion_pytorch import Unet1D, GaussianDiffusion1D, Trainer1D,Dataset1D
+from denoising_diffusion_pytorch import Unet1D, GaussianDiffusion1D, Trainer1D, Dataset1D
 # from diffusion_utilities import *
 
 model = Unet1D(
