@@ -15,8 +15,8 @@ diffusion = GaussianDiffusion1D(
     objective='pred_v'
 )
 
-training_seq = torch.rand(64, 32, 128) # features are normalized from 0 to 1
-dataset = Dataset1D(training_seq)  # this is just an example, but you can formulate your own Dataset and pass it into the `Trainer1D` below
+training_seq = torch.rand(64, 32, 128) # 归一化，features are normalized from 0 to 1
+dataset = Dataset1D(training_seq)  # 目标数据集
 
 trainer = Trainer1D(
     diffusion,

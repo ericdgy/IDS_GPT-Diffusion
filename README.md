@@ -1,4 +1,7 @@
 # IDS_GPT-Diffusion
+# GPT
+生成的是流特征  
+实时组流，提取特征，对照
 # Diffusion相关的库
 https://github.com/huggingface/diffusers  
 https://github.com/lucidrains/denoising-diffusion-pytorch
