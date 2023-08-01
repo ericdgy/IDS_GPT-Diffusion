@@ -1,4 +1,5 @@
-from denoising_diffusion_pytorch import Unet1D, GaussianDiffusion1D, Trainer1D
+import torch
+from denoising_diffusion_pytorch import Unet1D, GaussianDiffusion1D, Trainer1D,Dataset1D
 # from diffusion_utilities import *
 
 model = Unet1D(
@@ -14,7 +15,8 @@ diffusion = GaussianDiffusion1D(
     objective='pred_v'
 )
 
-dataset = TargerDomainDS("address", False)
+training_seq = torch.rand(64, 32, 128) # features are normalized from 0 to 1
+dataset = Dataset1D(training_seq)  # this is just an example, but you can formulate your own Dataset and pass it into the `Trainer1D` below
 
 trainer = Trainer1D(
     diffusion,
