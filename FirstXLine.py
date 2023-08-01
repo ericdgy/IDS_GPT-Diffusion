@@ -1,6 +1,6 @@
 import csv
 
-def read_csv_file(filename, num_rows=5):
+def read_csv_file(filename, num_rows):
     try:
         with open(filename, 'r', newline='') as csvfile:
             csvreader = csv.reader(csvfile)
@@ -22,4 +22,4 @@ def read_csv_file(filename, num_rows=5):
 
 if __name__ == "__main__":
     filename = "D:/dataset/Friday-02-03-2018_TrafficForML_CICFlowMeter.csv"
-    read_csv_file(filename, num_rows=5)
+    read_csv_file(filename, num_rows=10)
