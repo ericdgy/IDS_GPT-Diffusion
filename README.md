@@ -20,3 +20,14 @@ Header: ['Dst Port', 'Protocol', 'Timestamp', 'Flow Duration', 'Tot Fwd Pkts', '
 'Bwd Blk Rate Avg', 'Subflow Fwd Pkts', 'Subflow Fwd Byts', 'Subflow Bwd Pkts', 'Subflow Bwd Byts', 
 'Init Fwd Win Byts', 'Init Bwd Win Byts', 'Fwd Act Data Pkts', 'Fwd Seg Size Min', 'Active Mean', 
 'Active Std', 'Active Max', 'Active Min', 'Idle Mean', 'Idle Std', 'Idle Max', 'Idle Min', 'Label']  
+每个CSV文件中不同标签的数量和标签名称列表：  
+Friday-02-03-2018_TrafficForML_CICFlowMeter.csv: 标签数量 = 2, 标签名称 = ['Benign', 'Bot']  
+Friday-16-02-2018_TrafficForML_CICFlowMeter.csv: 标签数量 = 4, 标签名称 = ['Benign', 'DoS attacks-SlowHTTPTest', 'DoS attacks-Hulk', 'Label']  
+Friday-23-02-2018_TrafficForML_CICFlowMeter.csv: 标签数量 = 4, 标签名称 = ['Benign', 'Brute Force -Web', 'Brute Force -XSS', 'SQL Injection']  
+Thuesday-20-02-2018_TrafficForML_CICFlowMeter.csv: 标签数量 = 2, 标签名称 = ['Benign', 'DDoS attacks-LOIC-HTTP']  
+Thursday-01-03-2018_TrafficForML_CICFlowMeter.csv: 标签数量 = 3, 标签名称 = ['Benign', 'Label', 'Infilteration']  
+Thursday-15-02-2018_TrafficForML_CICFlowMeter.csv: 标签数量 = 3, 标签名称 = ['Benign', 'DoS attacks-GoldenEye', 'DoS attacks-Slowloris']  
+Thursday-22-02-2018_TrafficForML_CICFlowMeter.csv: 标签数量 = 4, 标签名称 = ['Benign', 'Brute Force -Web', 'Brute Force -XSS', 'SQL Injection']  
+Wednesday-14-02-2018_TrafficForML_CICFlowMeter.csv: 标签数量 = 3, 标签名称 = ['Benign', 'FTP-BruteForce', 'SSH-Bruteforce']  
+Wednesday-21-02-2018_TrafficForML_CICFlowMeter.csv: 标签数量 = 3, 标签名称 = ['Benign', 'DDOS attack-LOIC-UDP', 'DDOS attack-HOIC']  
+Wednesday-28-02-2018_TrafficForML_CICFlowMeter.csv: 标签数量 = 3, 标签名称 = ['Benign', 'Label', 'Infilteration']  
