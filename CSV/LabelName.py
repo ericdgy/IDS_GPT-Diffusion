@@ -53,5 +53,5 @@ def count_unique_labels_in_csv_folder(folder_path):
         print(f"Error: {e}")
 
 if __name__ == "__main__":
-    folder_path = "D:/dataset"  # 替换为你的文件夹路径
+    folder_path = "F:/dataset"  # 替换为你的文件夹路径
     count_unique_labels_in_csv_folder(folder_path)

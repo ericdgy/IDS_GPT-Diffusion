@@ -1,43 +1,31 @@
-import os
 import pandas as pd
+import os
 
-def merge_csv_files_by_time(folder_path):
-    try:
-        # 获取文件夹中所有文件的列表
-        file_list = os.listdir(folder_path)
+# 文件夹路径，包含所有CSV文件
+folder_path = 'F:/dataset'
 
-        # 用于存储所有CSV文件的DataFrame列表
-        dfs = []
+# 创建一个空的列表，用于存储每个文件的数据
+data_frames = []
 
-        # 遍历文件夹中的所有文件
-        for filename in file_list:
-            # 确保文件是CSV文件
-            if filename.endswith(".csv"):
-                # 构建CSV文件的完整路径
-                file_path = os.path.join(folder_path, filename)
+# 遍历文件夹中的每个文件
+for filename in os.listdir(folder_path):
+    if filename.endswith('.csv'):
+        file_path = os.path.join(folder_path, filename)
 
-                # 读取CSV文件，并将"Timestamp"列解析为日期时间类型
-                df = pd.read_csv(file_path, parse_dates=["Timestamp"], dayfirst=True)
+        # 读取CSV文件
+        data = pd.read_csv(file_path)
 
-                # 将DataFrame添加到列表中
-                dfs.append(df)
+        # 将数据添加到列表中
+        data_frames.append(data)
 
-        # 合并DataFrame列表为一个新的DataFrame，按照"Timestamp"列排序
-        merged_df = pd.concat(dfs).sort_values(by="Timestamp")
+# 使用pd.concat合并所有数据
+merged_data = pd.concat(data_frames, ignore_index=True)
 
-        # 打印合并后的DataFrame
-        print("合并后的DataFrame:")
-        print(merged_df)
+# 将时间列转换为datetime对象，以便排序
+merged_data["Timestamp"] = pd.to_datetime(merged_data["Timestamp"], dayfirst=True)
 
-        # 保存合并后的DataFrame为新的CSV文件
-        merged_df.to_csv("merged_data.csv", index=False)
-        print("合并后的数据保存成功！")
+# 按时间列排序
+merged_data = merged_data.sort_values(by="Timestamp")
 
-    except FileNotFoundError:
-        print("Error: 文件夹未找到。")
-    except Exception as e:
-        print(f"Error: {e}")
-
-if __name__ == "__main__":
-    folder_path = "D:/dataset"  # 替换为你的文件夹路径
-    merge_csv_files_by_time(folder_path)
+# 保存合并后的数据到新的CSV文件
+merged_data.to_csv('merged_data.csv', index=False)
