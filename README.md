@@ -19,7 +19,7 @@ Header: ['Dst Port', 'Protocol', 'Timestamp', 'Flow Duration', 'Tot Fwd Pkts', '
 'Fwd Byts/b Avg', 'Fwd Pkts/b Avg', 'Fwd Blk Rate Avg', 'Bwd Byts/b Avg', 'Bwd Pkts/b Avg', 
 'Bwd Blk Rate Avg', 'Subflow Fwd Pkts', 'Subflow Fwd Byts', 'Subflow Bwd Pkts', 'Subflow Bwd Byts', 
 'Init Fwd Win Byts', 'Init Bwd Win Byts', 'Fwd Act Data Pkts', 'Fwd Seg Size Min', 'Active Mean', 
-'Active Std', 'Active Max', 'Active Min', 'Idle Mean', 'Idle Std', 'Idle Max', 'Idle Min', 'Label']
+'Active Std', 'Active Max', 'Active Min', 'Idle Mean', 'Idle Std', 'Idle Max', 'Idle Min', 'Label']  
 每个CSV文件中不同标签的数量和标签名称列表：  
 Friday-02-03-2018_TrafficForML_CICFlowMeter.csv: 标签数量 = 2, 标签名称 = ['Benign', 'Bot']  
 Friday-16-02-2018_TrafficForML_CICFlowMeter.csv: 标签数量 = 4, 标签名称 = ['Benign', 'DoS attacks-SlowHTTPTest', 'DoS attacks-Hulk', 'Label']  
