@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 # 读取数据
-data = pd.read_csv('D:/dataset/Friday-02-03-2018_TrafficForML_CICFlowMeter.csv')
+data = pd.read_csv('F:/dataset/Friday-02-03-2018_TrafficForML_CICFlowMeter.csv')
 
 # 分割数据为训练集和测试集
 train_data, test_data = train_test_split(data, test_size=0.2, random_state=42)
