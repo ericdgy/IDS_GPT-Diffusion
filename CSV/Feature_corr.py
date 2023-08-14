@@ -12,7 +12,7 @@ df = df.drop(columns=['Timestamp', 'Label'])
 corr = df.corr()
 
 # 找出高关联的特征对
-threshold = 0.8  # 设置阈值，可以根据需要调整
+threshold = 0.95  # 设置阈值，可以根据需要调整
 high_corr = []
 for i in range(len(corr.columns)):
     for j in range(i):
@@ -25,6 +25,6 @@ for item in high_corr:
 
 # 绘制热度图
 plt.figure(figsize=(20, 15))
-sns.heatmap(corr, cmap='coolwarm', annot=True, fmt=".2f")
+sns.heatmap(corr)
 plt.title("Feature Correlation Heatmap")
 plt.show()
